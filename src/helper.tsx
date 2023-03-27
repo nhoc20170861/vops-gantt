@@ -1,4 +1,4 @@
-import { Task } from "gantt-task-react"
+import { Task } from "gantt-task-react";
 
 export function initTasks() {
   const currentDate = new Date();
@@ -8,10 +8,17 @@ export function initTasks() {
       end: new Date(currentDate.getFullYear(), currentDate.getMonth(), 15),
       name: "Some Project",
       id: "ProjectSample",
-      progress: 25,
+      progress: 100,
       type: "project",
       hideChildren: false,
       displayOrder: 1,
+      // styles: {
+      //   backgroundColor: "rgba(255, 255, 255, 0.5)",
+      //   progressColor: "rgba(255, 255, 255, 0.5)",
+      //   backgroundSelectedColor: "rgba(255, 255, 255, 0.5)",
+      //   progressSelectedColor: "rgba(255, 255, 255, 0.5)",
+      // },
+      isDisabled: true,
     },
     {
       start: new Date(currentDate.getFullYear(), currentDate.getMonth(), 1),
@@ -98,7 +105,7 @@ export function initTasks() {
 }
 
 export function getStartEndDateForProject(tasks: Task[], projectId: string) {
-  const projectTasks = tasks.filter(t => t.project === projectId);
+  const projectTasks = tasks.filter((t) => t.project === projectId);
   let start = projectTasks[0].start;
   let end = projectTasks[0].end;
 

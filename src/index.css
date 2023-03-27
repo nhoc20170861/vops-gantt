@@ -83,14 +83,13 @@ input:checked + .Slider:before {
 }
 
 .header-container {
-  padding: 8px 24px 16px 24px;
   border-right: 4px solid rgba(46, 82, 166, 0.12);
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(5px);
   width: 638px;
-  height: 80px;
+  height: 64px;
   margin: 0px;
 }
 .header-wrapper {
@@ -101,12 +100,12 @@ input:checked + .Slider:before {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  align-content: center;
-  padding: 14px 0px;
+  padding: 16px 24px 16px 24px;
   margin: 0px;
   /* width: 590px;
   height: 56px; */
-  border-bottom: 1.5px solid rgba(46, 82, 166, 0.06);
+  border-bottom: 1.5px solid #333;
+  position: relative;
 }
 
 .header-col-title {
@@ -114,7 +113,7 @@ input:checked + .Slider:before {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 4px;
+  padding: 4px 0px;
   gap: 10px;
   width: 374px;
   height: 28px;
@@ -136,9 +135,9 @@ input:checked + .Slider:before {
   /* Auto layout */
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  padding: 4px;
+  padding: 4px 0px;
   gap: 10px;
   width: 120px;
   height: 28px;
@@ -170,8 +169,7 @@ input:checked + .Slider:before {
 
 .taskList-container {
   width: 638px;
-  height: 564px;
-  padding: 0px 24px 8px 24px;
+  max-height: 564px;
   border-right: 4px solid rgba(46, 82, 166, 0.12);
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
@@ -183,11 +181,11 @@ input:checked + .Slider:before {
 }
 
 .taskList-wrapper {
+  padding: 16px 24px 8px 24px;
+  --tasklist-wrapper-width: 590px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 590px;
-  height: 284px;
 }
 
 /* =====Css taskList assign====*/
@@ -198,12 +196,13 @@ input:checked + .Slider:before {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 4px 16px 4px 4px;
+  padding: 4px 0px 4px 0px;
   gap: 10px;
   margin: 0;
   border-radius: 25px;
 }
 .box-contain-avatar {
+  padding-left: 4px;
   margin: 0;
   display: flex;
   align-items: center;
@@ -213,7 +212,6 @@ input:checked + .Slider:before {
   height: 36px;
   width: 36px;
   border-radius: 50%;
-  padding: 4px 4px 4px 0px;
 }
 .box-contain-userinfo {
   height: 26px;
@@ -221,16 +219,16 @@ input:checked + .Slider:before {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 4px;
-  gap: 4px;
 }
 .userinfo-name {
+  display: flex;
+  justify-content: flex-start;
   width: 100px;
   height: 18px;
   font-family: "Lexend";
   font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
+  font-weight: bold;
+  font-size: 0.9rem;
   line-height: 18px;
   color: #2c2c6a;
 }
@@ -250,7 +248,7 @@ input:checked + .Slider:before {
   font-family: "Lexend";
   font-style: normal;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 1rem;
   line-height: 18px;
   color: #7c7c91;
 }

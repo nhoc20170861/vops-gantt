@@ -127,6 +127,8 @@ const App = () => {
         onExpanderClick={handleExpanderClick}
         listCellWidth={isChecked ? "590px" : ""}
         columnWidth={columnWidth}
+        headerHeight={64}
+        viewDate={new Date(2018, 15, 24, 10, 33, 30)}
       />
     </div>
   );

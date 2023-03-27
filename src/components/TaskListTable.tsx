@@ -32,7 +32,6 @@ const TaskListTable: React.FC<TaskListTable> = ({
             <>
               {isProject ? (
                 <div className="taskList-assignee" key={item.id}>
-                  {" "}
                   <div className="box-contain-avatar">
                     <img
                       src="./avatar.jpg"
